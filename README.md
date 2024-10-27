@@ -1,3 +1,3 @@
 # Coconut DB
 
-[Design Document](doc/README.md)
+[Wiki]([doc/README.md](https://github.com/coconut-db/coconut-db/wiki/Proposal-Concepts))
