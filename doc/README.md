@@ -6,16 +6,16 @@
 
 example:
 
-* [P) Primary](#) [Write & Read]
+* [P) Primary]() [Write & Read]
 * R) Replica [Read Only]
 
- Host 1           | Host 2        | Host 3        
-------------------|---------------|---------------
- [Block A (P)](#) | .. A (R)      | .. A (R)      
- .. B (R)         | [.. B (P)](#) | .. B (R)      
- .. C (R)         | .. C (R)      | [.. C (P)](#) 
- [.. D (P)](#)    | .. D (R)      | .. D (R)      
- .. E (R)         | [.. E (P)](#) | .. E (R)      
+ Host 1           | Host 2       | Host 3        
+------------------|--------------|---------------
+ [Block A (P)]() | .. A (R)     | .. A (R)      
+ .. B (R)         | [.. B (P)]() | .. B (R)      
+ .. C (R)         | .. C (R)     | [.. C (P)]() 
+ [.. D (P)]()    | .. D (R)     | .. D (R)      
+ .. E (R)         | [.. E (P)]() | .. E (R)      
 
 Note: there is only one Primary Block but many Replicas in the cluster 
 
@@ -44,11 +44,11 @@ example:
 
  Block Shard ID | Address                             
 ----------------|-------------------------------------
- Block A        | [P] Host 1 , [R] Host 2, [R] Host 3 
- Block B        | [R] Host 1 , [P] Host 2, [R] Host 3 
- Block C        | [R] Host 1 , [R] Host 2, [P] Host 3 
- Block D        | [P] Host 1 , [R] Host 2, [R] Host 3 
- Block E        | [R] Host 1 , [P] Host 2, [R] Host 3 
+ Block A        | [[P]]() Host 1 , [R] Host 2, [R] Host 3 
+ Block B        | [R] Host 1 , [[P]]() Host 2, [R] Host 3 
+ Block C        | [R] Host 1 , [R] Host 2, [[P]]() Host 3 
+ Block D        | [[P]]() Host 1 , [R] Host 2, [R] Host 3 
+ Block E        | [R] Host 1 , [[P]]() Host 2, [R] Host 3 
 
 ### Object Type
 
